@@ -18,7 +18,7 @@ export const ComponentBallon = styled.img`
     top: 44%;
 
     @keyframes ballon {
-        from {top: 42%}
-        to {top:38%}
+        0% {transform: translateY(0%); visibility: hidden}
+        100% {transform: translateY(-60%); visibility: visible}
     }
 `

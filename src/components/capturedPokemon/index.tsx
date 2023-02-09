@@ -1,12 +1,12 @@
 import { ComponentCaptured } from "./styled";
 
 type Props = {
-    children: JSX.Element | JSX.Element[] | string;
-    onclick: any;
-    backgroundColor: any;
-    borderColor: any;
-    index: any;
-    backgroundImg:any;
+    children?: JSX.Element | JSX.Element[] | string;
+    onclick?: any;
+    backgroundColor?: any;
+    borderColor?: any;
+    index?: any;
+    backgroundImg?:any;
 }
 
 const CapturedPokemon = ({children, onclick, backgroundColor, borderColor, index, backgroundImg}: Props) => {

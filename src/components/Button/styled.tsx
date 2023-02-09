@@ -22,4 +22,7 @@ export const ButtonComponent = styled.button`
     width: max-content;
     z-index: 9000;
     cursor: pointer;
+    &:disabled{
+        background-color: #ccc;
+    }
 `

@@ -28,7 +28,8 @@ export const ComponentWraper = styled.div`
 export const ComponentCloseModal = styled.button`
     width: 38px;
     height: 38px;
-    position: fixed;
+    position: sticky;
+    float: right;
     top: 12px;
     right: 12px;
     border-radius: 50%;

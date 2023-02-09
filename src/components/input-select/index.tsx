@@ -32,25 +32,31 @@ const InputSelect = ({ selected, setSelected }: Props) => {
       }
       setSelected([...selected, type]);
     }
+
   };
 
   return (
     <Wrapper onClick={toggleOpen}>
       <Selected>
-        {selected.length
-          ? selected.map((selectedType: any) => selectedType).join(", ")
-          : (
+        {selected.length ? (
+          selected.map((selectedType: any) => selectedType).join(", ")
+        ) : (
           <div className="selectOptions">
             Selecione o(s) tipo(s)
-            <img src={arrowDown} alt="arrow down"/>
+            <img src={arrowDown} alt="arrow down" />
           </div>
-          )}
+        )}
       </Selected>
       {open && (
         <Options>
           {option.map((item: any) => (
-            <Option key={item.type}>
+            <Option key={item.type} color={item.color} onClick={(e) => handleSelection(e, item.type)}>
               <div className="itemSelect">
+                <label
+                  htmlFor={item.type}
+                >
+                  {item.type}
+                </label>
                 <input
                   type="checkbox"
                   onChange={(e) => handleSelection(e, item.type)}
@@ -58,7 +64,6 @@ const InputSelect = ({ selected, setSelected }: Props) => {
                   id={item.type}
                   name={item.type}
                 />
-                <label htmlFor={item.type}>{item.type}</label>
               </div>
             </Option>
           ))}
